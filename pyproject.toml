@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "namakan-mcp-projects"
+version = "0.1.0"
+description = "Unified MCP server for project management (Jira, Asana, Monday, ClickUp, Smartsheet, MS Project, Trello)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Namakan AI Engineering" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+namakan-mcp-projects = "namakan_mcp_projects.server:main"
+
+[project.urls]
+Homepage = "https://github.com/cfollette18/namakan-mcp-projects"
+
+[tool.setuptools.packages.find]
+where = ["src"]
