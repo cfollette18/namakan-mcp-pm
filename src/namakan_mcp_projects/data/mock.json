@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {"id": "p1", "name": "Phase 1 audit", "status": "doing"},
+    {"id": "p2", "name": "ERP connector", "status": "todo"}
+  ],
+  "tasks": [
+    {"id": "t1", "project_id": "p1", "title": "Map PO entry workflow", "status": "doing", "assignee": "discovery-analyst"},
+    {"id": "t2", "project_id": "p1", "title": "Data exposure findings", "status": "todo", "assignee": "ciso"},
+    {"id": "t3", "project_id": "p2", "title": "CSV adapter for Epicor export", "status": "todo", "assignee": "integration-engineer"}
+  ],
+  "comments": []
+}

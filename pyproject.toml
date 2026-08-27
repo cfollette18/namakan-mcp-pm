@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "namakan-mcp-projects"
-version = "0.1.0"
+version = "0.2.0"
 description = "Unified MCP server for project management (Jira, Asana, Monday, ClickUp, Smartsheet, MS Project, Trello)."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -23,3 +23,9 @@ Homepage = "https://github.com/cfollette18/namakan-mcp-projects"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+namakan_mcp_projects = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
