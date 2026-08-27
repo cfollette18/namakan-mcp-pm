@@ -18,7 +18,7 @@ class PmBackend(Protocol):
 
 
 def _seed() -> dict[str, Any]:
-    return json.loads(files("namakan_mcp_projects.data").joinpath("mock.json").read_text(encoding="utf-8"))
+    return json.loads(files("namakan_mcp_pm.data").joinpath("mock.json").read_text(encoding="utf-8"))
 
 
 class MockPm:

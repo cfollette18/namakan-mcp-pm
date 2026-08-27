@@ -1,4 +1,4 @@
-# namakan-mcp-projects
+# namakan-mcp-pm
 
 Internal MCP server: one project/work-management surface. Namakan agents call `pm_find_task` whether the backend is Jira, Asana, Monday, ClickUp, Smartsheet, Microsoft Project, or Trello.
 
@@ -8,12 +8,12 @@ Internal MCP server: one project/work-management surface. Namakan agents call `p
 
 ```yaml
 mcp_servers:
-  namakan-mcp-projects:
+  namakan-mcp-pm:
     command: uvx
     args:
       - --from
-      - git+https://github.com/cfollette18/namakan-mcp-projects.git
-      - namakan-mcp-projects
+      - git+https://github.com/cfollette18/namakan-mcp-pm.git
+      - namakan-mcp-pm
       - serve
     env:
       NAMAKAN_PM_BACKEND: mock
@@ -37,7 +37,7 @@ Bootstrap writes that into every Hermes profile with `using-namakan-mcp`.
 Demo without an agent process:
 
 ```bash
-namakan-mcp-projects workflow
+namakan-mcp-pm workflow
 ```
 
 Expected: four JSON steps. Last step `"error": "writes_disabled"`.

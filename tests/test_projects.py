@@ -1,6 +1,6 @@
-from namakan_mcp_projects.backends import MockPm
-from namakan_mcp_projects.protocol import handle_rpc
-from namakan_mcp_projects.server import VERSION, handle, list_tools, main, run_workflow
+from namakan_mcp_pm.backends import MockPm
+from namakan_mcp_pm.protocol import handle_rpc
+from namakan_mcp_pm.server import VERSION, handle, list_tools, main, run_workflow
 
 
 def test_find_task():
@@ -29,7 +29,7 @@ def test_workflow_blocks_write(monkeypatch):
 def test_mcp_list():
     resp = handle_rpc(
         {"jsonrpc": "2.0", "id": 1, "method": "tools/list"},
-        server_name="namakan-mcp-projects",
+        server_name="namakan-mcp-pm",
         version=VERSION,
         list_tools=list_tools,
         call_tool=handle,

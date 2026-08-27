@@ -4,10 +4,10 @@ import os
 import sys
 from typing import Any
 
-from namakan_mcp_projects.backends import PmBackend, load_backend
-from namakan_mcp_projects.protocol import cli_main
+from namakan_mcp_pm.backends import PmBackend, load_backend
+from namakan_mcp_pm.protocol import cli_main
 
-VERSION = "0.3.0"
+VERSION = "0.3.1"
 
 WRITE_TOOLS = {"pm_update_status", "pm_add_comment"}
 
@@ -133,10 +133,10 @@ def run_workflow(
 def main(argv: list[str] | None = None) -> int:
     return cli_main(
         argv,
-        prog="namakan-mcp-projects",
+        prog="namakan-mcp-pm",
         description="Unified project-management MCP server.",
         version=VERSION,
-        server_name="namakan-mcp-projects",
+        server_name="namakan-mcp-pm",
         list_tools=list_tools,
         call_tool=handle,
         run_workflow=run_workflow,
