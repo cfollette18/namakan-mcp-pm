@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="280" viewBox="0 0 920 280" role="img">
+  <rect width="920" height="280" rx="18" fill="#F4F6F8"/>
+  
+  <text x="28" y="36" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1B3139">Potential use cases</text>
+  <text x="28" y="56" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">Same MCP tools. Different plant problems.</text>
+
+  <g>
+    <rect x="28" y="78" width="280" height="170" rx="16" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="60" cy="110" r="16" fill="#0D9488"/>
+    <g transform="translate(60,110) scale(0.85)"><rect x="-9" y="-8" width="6" height="16" rx="1" fill="none" stroke="white" stroke-width="2"/><rect x="-2" y="-8" width="6" height="10" rx="1" fill="none" stroke="white" stroke-width="2"/><rect x="5" y="-8" width="5" height="13" rx="1" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="86" y="116" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1B3139">Engagement board</text>
+    <text x="48" y="146" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">delivery-manager mirrors Phase 1/2</text>
+<text x="48" y="162" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">status into the client Jira without</text>
+<text x="48" y="178" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">learning Jira's API.</text>
+  </g>
+
+  <g>
+    <rect x="326" y="78" width="280" height="170" rx="16" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="358" cy="110" r="16" fill="#1B3139"/>
+    <g transform="translate(358,110) scale(0.85)"><rect x="-8" y="-6" width="16" height="12" rx="2" fill="none" stroke="white" stroke-width="2"/><path d="M-4 0 L-1 3 L5 -3" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="384" y="116" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1B3139">Where is the audit?</text>
+    <text x="346" y="146" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">Ops asks Namakan. pm_find_task hits</text>
+<text x="346" y="162" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">mock today and Asana after go-live.</text>
+  </g>
+
+  <g>
+    <rect x="624" y="78" width="280" height="170" rx="16" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="656" cy="110" r="16" fill="#FF3621"/>
+    <g transform="translate(656,110) scale(0.85)"><rect x="-7" y="-1" width="14" height="10" rx="2" fill="none" stroke="white" stroke-width="2"/><path d="M-4 -1 V-5 C-4 -9 4 -9 4 -5 V-1" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="682" y="116" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1B3139">Close the task</text>
+    <text x="644" y="146" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">pm_update_status stays blocked until</text>
+<text x="644" y="162" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">writes are enabled. Dry-run shows the</text>
+<text x="644" y="178" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">would-be call.</text>
+  </g>
+</svg>

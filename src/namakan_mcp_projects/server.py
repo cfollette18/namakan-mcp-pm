@@ -1,15 +1,13 @@
 from __future__ import annotations
 
-import argparse
-import json
 import os
 import sys
 from typing import Any
 
 from namakan_mcp_projects.backends import PmBackend, load_backend
-from namakan_mcp_projects.protocol import parse_kv, serve as serve_mcp
+from namakan_mcp_projects.protocol import cli_main
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 
 WRITE_TOOLS = {"pm_update_status", "pm_add_comment"}
 
@@ -57,6 +55,14 @@ def list_tools() -> list[dict[str, Any]]:
                 "required": ["task_id", "body"],
             },
         },
+        {
+            "name": "pm_run_workflow",
+            "description": "Full AI workflow out of the box: list projects → find task → blocked status update. Mock board. No Jira token.",
+            "inputSchema": {
+                "type": "object",
+                "properties": {"use_case": {"type": "string"}, "query": {"type": "string"}},
+            },
+        },
     ]
 
 
@@ -81,6 +87,12 @@ def handle(tool: str, arguments: dict[str, Any], backend: PmBackend | None = Non
             return {"ok": True, "data": backend.update_status(arguments["task_id"], arguments["status"])}
         if tool == "pm_add_comment":
             return {"ok": True, "data": backend.add_comment(arguments["task_id"], arguments["body"])}
+        if tool == "pm_run_workflow":
+            return run_workflow(
+                str(arguments.get("use_case") or "engagement-board"),
+                query=str(arguments.get("query") or "workflow"),
+                backend=backend,
+            )
     except RuntimeError as exc:
         return {"ok": False, "error": str(exc)}
     except KeyError as exc:
@@ -88,40 +100,47 @@ def handle(tool: str, arguments: dict[str, Any], backend: PmBackend | None = Non
     return {"ok": False, "error": f"unknown tool {tool}"}
 
 
+def run_workflow(
+    use_case: str = "engagement-board",
+    *,
+    query: str = "workflow",
+    backend: PmBackend | None = None,
+) -> dict[str, Any]:
+    known = {"engagement-board", "where-is-the-audit", "close-the-task"}
+    if use_case not in known:
+        return {"ok": False, "error": f"unknown use_case {use_case}"}
+    backend = backend or load_backend(None)
+    steps = [
+        {"tool": "pm_list_projects", **handle("pm_list_projects", {}, backend=backend)},
+        {"tool": "pm_find_task", **handle("pm_find_task", {"query": query}, backend=backend)},
+        {"tool": "pm_list_tasks", **handle("pm_list_tasks", {}, backend=backend)},
+        {
+            "tool": "pm_update_status",
+            **handle("pm_update_status", {"task_id": "t1", "status": "done"}, backend=backend),
+        },
+    ]
+    return {
+        "ok": True,
+        "workflow": use_case,
+        "summary": (
+            "Listed projects and found a task on the unified PM tools. "
+            "The status write stayed blocked (read-only default) — that is the demo, not a failure."
+        ),
+        "steps": steps,
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(
+    return cli_main(
+        argv,
         prog="namakan-mcp-projects",
         description="Unified project-management MCP server.",
-    )
-    parser.add_argument("--version", action="version", version=f"namakan-mcp-projects {VERSION}")
-    sub = parser.add_subparsers(dest="cmd")
-    sub.add_parser("serve")
-    sub.add_parser("tools")
-    sub.add_parser("demo")
-    call = sub.add_parser("call")
-    call.add_argument("tool")
-    call.add_argument("kv", nargs="*")
-    args = parser.parse_args(argv)
-    cmd = args.cmd or "serve"
-    if cmd == "tools":
-        for tool in list_tools():
-            print(f"{tool['name']}\t{tool['description']}")
-        return 0
-    if cmd == "demo":
-        print(json.dumps(handle("pm_list_projects", {}), indent=2))
-        print(json.dumps(handle("pm_find_task", {"query": "audit"}), indent=2))
-        print(json.dumps(handle("pm_update_status", {"task_id": "t1", "status": "done"}), indent=2))
-        return 0
-    if cmd == "call":
-        print(json.dumps(handle(args.tool, parse_kv(args.kv)), indent=2, default=str))
-        return 0
-    serve_mcp(
-        server_name="namakan-mcp-projects",
         version=VERSION,
+        server_name="namakan-mcp-projects",
         list_tools=list_tools,
         call_tool=handle,
+        run_workflow=run_workflow,
     )
-    return 0
 
 
 if __name__ == "__main__":

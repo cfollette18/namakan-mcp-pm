@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "namakan-mcp-projects": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/cfollette18/namakan-mcp-projects.git",
+        "namakan-mcp-projects",
+        "serve"
+      ],
+      "env": {
+        "NAMAKAN_PM_BACKEND": "mock"
+      }
+    }
+  }
+}

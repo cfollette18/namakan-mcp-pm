@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="250" viewBox="0 0 920 250" role="img">
+  <rect width="920" height="250" rx="18" fill="#F4F6F8"/>
+  
+  <text x="28" y="36" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1B3139">Internal MCP. One project tool surface.</text>
+  <text x="28" y="56" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#5C6B75">delivery-manager mirrors engagement status into the client's Jira without learning Jira.</text>
+
+  <g>
+    <rect x="28" y="88" width="148" height="118" rx="14" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="102.0" cy="126" r="18" fill="#1B3139"/>
+    <g transform="translate(102.0,126)"><circle cx="0" cy="-4" r="5" fill="none" stroke="white" stroke-width="2"/><path d="M-8 10 C-8 4 8 4 8 10" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="102.0" y="178" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B3139">delivery-mgr</text>
+    <text x="102.0" y="194" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#5C6B75">Namakan agent</text>
+  </g>
+
+  <line x1="176" y1="140" x2="190" y2="140" stroke="#9AA7B2" stroke-width="2"/>
+  <polygon points="198,140 190,136 190,144" fill="#9AA7B2"/>
+
+  <g>
+    <rect x="198" y="88" width="148" height="118" rx="14" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="272.0" cy="126" r="18" fill="#0D9488"/>
+    <g transform="translate(272.0,126)"><rect x="-8" y="-6" width="10" height="12" rx="2" fill="none" stroke="white" stroke-width="2"/><path d="M2 -3 H8 M2 3 H8" stroke="white" stroke-width="2"/></g>
+    <text x="272.0" y="178" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B3139">MCP</text>
+    <text x="272.0" y="194" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#5C6B75">stdio</text>
+  </g>
+
+  <line x1="346" y1="140" x2="360" y2="140" stroke="#9AA7B2" stroke-width="2"/>
+  <polygon points="368,140 360,136 360,144" fill="#9AA7B2"/>
+
+  <g>
+    <rect x="368" y="88" width="148" height="118" rx="14" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="442.0" cy="126" r="18" fill="#0D9488"/>
+    <g transform="translate(442.0,126)"><rect x="-9" y="-8" width="6" height="16" rx="1" fill="none" stroke="white" stroke-width="2"/><rect x="-2" y="-8" width="6" height="10" rx="1" fill="none" stroke="white" stroke-width="2"/><rect x="5" y="-8" width="5" height="13" rx="1" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="442.0" y="178" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B3139">Tools</text>
+    <text x="442.0" y="194" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#5C6B75">pm_*</text>
+  </g>
+
+  <line x1="516" y1="140" x2="530" y2="140" stroke="#9AA7B2" stroke-width="2"/>
+  <polygon points="538,140 530,136 530,144" fill="#9AA7B2"/>
+
+  <g>
+    <rect x="538" y="88" width="148" height="118" rx="14" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="612.0" cy="126" r="18" fill="#FF3621"/>
+    <g transform="translate(612.0,126)"><rect x="-8" y="-6" width="16" height="12" rx="2" fill="none" stroke="white" stroke-width="2"/><path d="M-4 0 L-1 3 L5 -3" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="612.0" y="178" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B3139">Backend</text>
+    <text x="612.0" y="194" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#5C6B75">mock / Jira / Asana</text>
+  </g>
+
+  <line x1="686" y1="140" x2="700" y2="140" stroke="#9AA7B2" stroke-width="2"/>
+  <polygon points="708,140 700,136 700,144" fill="#9AA7B2"/>
+
+  <g>
+    <rect x="708" y="88" width="148" height="118" rx="14" fill="#FFFFFF" stroke="#D5DDE3" stroke-width="1.5"/>
+    <circle cx="782.0" cy="126" r="18" fill="#1B3139"/>
+    <g transform="translate(782.0,126)"><rect x="-7" y="-1" width="14" height="10" rx="2" fill="none" stroke="white" stroke-width="2"/><path d="M-4 -1 V-5 C-4 -9 4 -9 4 -5 V-1" fill="none" stroke="white" stroke-width="2"/></g>
+    <text x="782.0" y="178" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1B3139">Writes off</text>
+    <text x="782.0" y="194" text-anchor="middle" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#5C6B75">until CISO</text>
+  </g>
+</svg>
